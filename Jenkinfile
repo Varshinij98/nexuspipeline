@@ -18,21 +18,19 @@ pipeline {
     	    steps {
                script {
     	       	    nexusArtifactUploader credentialsId: 'nexus3', 
-    	       	    groupId: '',
-     	       	    nexusUrl: '34.228.36.163:8081', 
+     	       	    nexusUrl: '3.88.202.11:8081', 
      	       	    nexusVersion: 'nexus3', 
      	       	    protocol: 'http',
      	       	    repository: 'nexus', 
-     	       	    version: ''
     	       }
             }
         }   			
         stage('Nexus-Push') {
             steps {
-    	    	sh 'docker login -u 8184848757 -p Maroct-341 http://34.228.36.163:8081/repository/nexus'
-    	    	sh 'docker push http://34.228.36.163:8081/repository/nexus/mynginx:latest'
-    	    	sh 'docker rmi $(docker images --filter=reference="http://34.228.36.163:8081/repository/nexus/mynginx:latest*" -q)'
-    	    	sh 'docker logout http://34.228.36.163:8081/repository/nexus' 
+    	    	sh 'docker login -u 8184848757 -p Maroct-341 http://3.88.202.11:8081/repository/nexus'
+    	    	sh 'docker push http://3.88.202.11:8081/repository/nexus/mynginx:latest'
+    	    	sh 'docker rmi $(docker images --filter=reference="http://3.88.202.11:8081/repository/nexus/mynginx:latest*" -q)'
+    	    	sh 'docker logout http://3.88.202.11:8081/repository/nexus' 
             }   
         }   
         stage('create-container') {
