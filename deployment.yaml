@@ -1,20 +1,19 @@
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: mydeploy
-  name: mydeploy
+    app: mycontainer
+  name: mycontainer
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
-      app: mydeploy
+      app: mycontainer
   template:
     metadata:
       labels:
-        app: mydeploy
+        app: mycontainer
     spec:
       containers:
-      - image: revanpeddi/tomcat
-        name: tomcat
-       
+      - image: 8184848757/mycontainer:latest
+        name: mycontainer
