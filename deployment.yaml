@@ -15,5 +15,5 @@ spec:
         app: tomcat-helm
     spec:
       containers:
-      - image: fabric8/tomcat-9:latest
+      - image: 8184848757/mycontainer:latest
         name: tomcat-9
