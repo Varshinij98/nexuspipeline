@@ -2,18 +2,18 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: tomcat-helm
-  name: tomcat-helm
+    app: mycontainer
+  name: mycontainer
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: tomcat-helm
+      app: mycontainer
   template:
     metadata:
       labels:
-        app: tomcat-helm
+        app: mycontainer
     spec:
       containers:
       - image: 8184848757/mycontainer:latest
-        name: tomcat-9
+        name: mycontainer
