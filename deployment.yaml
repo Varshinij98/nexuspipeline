@@ -1,4 +1,4 @@
-apiVersion: apps/v1
+piVersion: apps/v1
 kind: Deployment
 metadata:
   name: mycontainer
@@ -13,14 +13,14 @@ spec:
     metadata:
       labels:
         app: mycontainer
-  spec:
-    containers:
-      - name: mycontainer
-        image: http://107.20.47.69:8081/repository/docker-private/v2/mysecond/manifests/latest:latest
-        imagePullPolicy: Always
-        ports:
+    spec:
+      containers:
         - name: mycontainer
-          containerPort: 8086
-          protocol: TCP
+          image: http://107.20.47.69:8081/repository/docker-private/v2/mysecond/manifests/latest:latest
+          imagePullPolicy: Always
+          ports:
+          - name: mycontainer
+            containerPort: 8086
+            protocol: TCP
     imagePullSecrets:
       - name: evoke
