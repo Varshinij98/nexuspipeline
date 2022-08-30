@@ -1,19 +1,15 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  labels:
-    app: mycontainer
   name: mycontainer
 spec:
-  replicas: 2
-  selector:
-    matchLabels:
-      app: mycontainer
-  template:
-    metadata:
-      labels:
-        app: mycontainer
-    spec:
-      containers:
-      - image: 8184848757/mycontainer:latest
-        name: mycontainer
+  containers:
+    - name: mycontainer
+      image: http://107.20.47.69:8081/repository/docker-private/
+      imagePullPolicy: Always
+      ports:
+      - name: mycontainer
+        containerPort: 8086
+        protocol: TCP
+  imagePullSecrets:
+    - name: evoke
