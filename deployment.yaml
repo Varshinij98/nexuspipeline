@@ -15,13 +15,13 @@ spec:
         app: mycontainer
     spec:
       containers:
+      - name: mycontainer
+        image: http://07.20.47.69:8081/repository/docker-private/v2/mysecond/manifests/latest:latest
+      imagePullSecrets:
+      - name: evoke
+        imagePullPolicy: Always
+        ports:
         - name: mycontainer
-          image: http://07.20.47.69:8081/repository/docker-private/v2/mysecond/manifests/latest:latest
-          imagePullSecrets:
-            - name: evoke
-          imagePullPolicy: Always
-          ports:
-          - name: mycontainer
-            containerPort: 8086
-            protocol: TCP
+          containerPort: 8086
+          protocol: TCP
        
