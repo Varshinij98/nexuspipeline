@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
     - name: mycontainer
-      image: http://107.20.47.69:8081/repository/docker-private/
+      image: http://107.20.47.69:8081/repository/docker-private/v2/mysecond/manifests/latest:latest
       imagePullPolicy: Always
       ports:
       - name: mycontainer
