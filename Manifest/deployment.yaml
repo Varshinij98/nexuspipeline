@@ -15,13 +15,13 @@ spec:
         app: mycontainer
     spec:
       containers:
-      - name: mycontainer
-        image: mysecond:latest
-        imagePullPolicy: Always
-        ports:
         - name: mycontainer
-            containerPort: 8086
-            protocol: TCP
+          image: mysecond:latest
+          imagePullPolicy: Always
+          ports:
+            - name: mycontainer
+              containerPort: 8086
+              protocol: TCP
       imagePullSecrets:
       - name: evoke
        
