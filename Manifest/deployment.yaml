@@ -21,7 +21,7 @@ spec:
           ports:
             - name: mycontainer
               protocol: TCP
-          - containerPort: 8086
+              containerPort: 8086
       imagePullSecrets:
       - name: evoke
        
