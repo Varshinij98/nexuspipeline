@@ -19,9 +19,9 @@ spec:
         image: http://34.229.84.181:8085/repository/docker-private/v2/mysecond/manifests/latest:latest
         imagePullPolicy: Always
         ports:
-        - name: mycontainer
-          protocol: TCP
         - containerPort: 8096
+          name: mycontainer
+          protocol: TCP
       imagePullSecrets:
       - name: evoke
        
