@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: mycontainer
-        image: http://34.229.84.181:8085/repository/docker-private/v2/mysecond/manifests/latest
+        image: mysecond:latest
         imagePullPolicy: Always
       imagePullSecrets:
       - name: evoke
