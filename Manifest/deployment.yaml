@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: mycontainer
-          image: mysecond:latest
+          image: http://34.229.84.181:8081/repository/docker-private/v2/mysecond/manifests/latest
           imagePullPolicy: Always
           ports:
             - name: mycontainer
