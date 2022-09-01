@@ -20,8 +20,8 @@ spec:
           imagePullPolicy: Always
           ports:
             - name: mycontainer
-              containerPort: 8086
               protocol: TCP
+          - containerPort: 8086
       imagePullSecrets:
       - name: evoke
        
