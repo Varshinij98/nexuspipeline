@@ -4,6 +4,7 @@ metadata:
   name: mycontainer
 spec:
   ports:
-    - protocol: TCP
+    - containerPort: 8096
+      protocol: TCP
       port: 80
-  - containerPort: 8096
+  
