@@ -5,6 +5,3 @@ metadata:
 spec:
   ports:
     - containerPort: 8096
-      protocol: TCP
-      port: 80
-  
