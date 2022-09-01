@@ -3,7 +3,10 @@ kind: Service
 metadata:
   name: mycontainer
 spec:
+  selector:
+    matchLabels:
+      app: mycontainer
   ports:
     - protocal: TCP
       ports: 80
-      containerPort: 80
+      containerPort: 8086
