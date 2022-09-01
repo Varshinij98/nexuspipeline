@@ -8,5 +8,6 @@ spec:
       app: mycontainer
   ports:
     - protocal: TCP
+      port: 80
       targetPort: 8086
-      containerPort: 8086
+      
