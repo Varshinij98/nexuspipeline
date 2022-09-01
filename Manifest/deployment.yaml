@@ -18,6 +18,10 @@ spec:
       - name: mycontainer
         image: mysecond:latest
         imagePullPolicy: Always
+        ports:
+        - name: mycontainer
+            containerPort: 8086
+            protocol: TCP
       imagePullSecrets:
       - name: evoke
        
