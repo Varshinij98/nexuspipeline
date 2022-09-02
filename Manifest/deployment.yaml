@@ -17,7 +17,7 @@ spec:
       containers:
         - name: mycontainer
           image:
-          imageURL: http://3.94.197.57:8081/repository/docker-private/mysecond:latest
+          ImageURL: http://3.94.197.57:8081/repository/docker-private/mysecond:latest
           imagePullPolicy: Always
           ports:
             - name: mycontainer
