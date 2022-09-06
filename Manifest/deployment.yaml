@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: mycontainer
-          image: '35.172.228.53:8085/mysecond:latest'
+          image: 54.87.17.31:8085/mysecond:latest
           imagePullPolicy: Always
           ports:
             - name: mycontainer
