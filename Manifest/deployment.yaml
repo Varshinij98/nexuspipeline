@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: mycontainer
-          image: 54.87.17.31:8085/mysecond:latest
+          image: 54.87.17.31:8085/docker-private/mysecond:latest
           imagePullPolicy: Always
           ports:
             - name: mycontainer
