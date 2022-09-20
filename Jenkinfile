@@ -17,7 +17,7 @@ pipeline {
         stage('Nexus-Credentials') {
     	    steps {
                script {
-    	       	    nexusArtifactUploader credentialsId: 'nexus3', 
+    	       	    nexusArtifactUploader credentialsId: 'nexusAdmin', 
      	       	    nexusUrl: '54.227.187.173:8081', 
      	       	    nexusVersion: 'nexus3', 
      	       	    protocol: 'http',
